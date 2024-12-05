@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Clash Grotesk';
+    src: url('/clash-grotesk-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Chillax';
+    src: url('/Chillax-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('/CabinetGrotesk-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/SpaceGrotesk-Bold.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: 'Clash Grotesk', 'Chillax', 'Cabinet Grotesk', 'Space Grotesk', sans-serif;
+    background-color: black;
+}
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+a:hover {
+    opacity: 0.8; 
+}
+i:hover {
+    opacity: 0.7;
+}
+
+#nav{
+    font-family: 'chillax';
+    color: white;
+    font-size: 1vw;
+    height: 5vw;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 3vw;
+}
+#headings {
+    font-size: 0.8vw;
+    font-weight: 150; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40vw;
+    color: rgba(255, 255, 255, 0.7); 
+    
+
+    
+}
+#logos{
+    font-size: 2vw;
+    color: white;
+    background-color: black;
+}
+#body{
+    height: calc(100% - 5vw - 577px) ;
+    /* background-color: white; */
+}
+
+.glowtxt {
+    font-size: 4.5vw; /* Font size based on viewport width */
+    font-weight: bold; /* Optional: Bold text */
+    font-family: 'Clash Grotesk', sans-serif; /* Use your desired font */
+    background: linear-gradient(90deg, #ff007a, #ff72d2, #6245ff); /* Gradient colors */
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+    color: black; /* Fallback for unsupported browsers */
+    text-align: center; /* Optional: Centers the text horizontally */
+    display: inline-block;
+    position: relative;
+    top: 2vw;
+    left: 29%;
+}
+
+
+.glowtxt .highlight {
+    position: relative;
+    color: inherit; 
+    text-shadow: 0 0 15px rgba(255, 0, 122, 1), 0 0 30px rgba(255, 0, 122, 0.7), 0 0 45px rgba(255, 0, 122, 0.5);
+    font-weight: bold; 
+}
+.normal h4{
+    font-size: 4.5vw;
+    color: white;
+    position: relative;
+    top: 1vw;
+    left: 35%;
+}
+.des{
+    height: 6.5vw;
+    width: 50%;
+    /* background-color: #ff007a; */
+    position: relative;
+    top: 1.765vw;
+    left: 29%;
+
+}
+.des h6{
+    font-family: 'Cabinet Grotesk';
+    color: rgba(255, 255, 255, 0.7); 
+    font-size: 1vw;
+    line-height: 1.75;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+#second{
+position: relative;
+left: 2.9%;
+}
+#last{
+    position: relative;
+    left: 25%;
+}
+#b1 {
+    height: 3vw; /* Height of the element */
+    width: 10vw; /* Width of the element */
+    font-size: 1vw; /* Font size for text */
+    font-family: 'Clash Grotesk', sans-serif; /* Font family */
+    color: white; /* Text color */
+    text-align: center; /* Centers text */
+    display: flex; /* Align text vertically */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: 1.5vw solid transparent; /* Transparent border for structure */
+    border-radius: 1.5vw; /* Rounded corners */
+    /* background: linear-gradient(90deg, #ff007a, #ff72d2, #6245ff); Gradient colors */
+    background-clip: border-box; /* Clips the background to the border */
+    box-shadow: 0 0 10px #ff007a, 0 0 20px #ff72d2, 0 0 30px #6245ff; /* Glowing effect */
+    background-color: rgb(0, 0, 0); /* Black background for the element */
+    position: relative;
+    cursor: pointer; /* Pointer cursor for hover effect */
+    padding: 2.5vw 0.vw;
+    margin-right: 0.798vw;
+}
+
+#b1:hover {
+    box-shadow: 0 0 15px #ff007a, 0 0 25px #ff72d2, 0 0 35px #6245ff; /* Enhanced glow on hover */
+}
+#b2 {
+    height: 3vw; 
+    width: 10vw; 
+    font-size: 1vw; 
+    font-family: 'Clash Grotesk', sans-serif;
+    color: white; /* Text color */
+   background-color: black;
+   border-color: white;
+    
+    border-radius: 1.5vw; 
+   
+}
+
+#b2:hover {
+    box-shadow: 0 0 15px #ff007a, 0 0 25px #ff72d2, 0 0 35px #6245ff; /* Enhanced glow on hover */
+}
+
+.buttons {
+    display: flex;
+        width: 20vw;
+        height: 3vw;
+        position: relative;
+        top: 1.765vw;
+       left: 35%;
+        /* background-color: red; */
+      
+ }
+    
+   
+
+#heroimg{
+    height: 20vw;
+    width: 100%;
+    /* background-color:red; */
+    position: relative;
+    top: 1.9vw;
+
+    background-image: url(/123Z_2101.w020.n001.946B.p15\ 1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
