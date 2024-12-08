@@ -22,20 +22,15 @@ const projectData = {
     project5: { 
         img: '/project/assets/5.png', 
         desc: 'Random Photos', 
-        link: '/project/Random Photos/index.html' 
+        link: '/project/RandomPhotos/index.html' 
     },
     project6: { 
-        img: '/project/assets/6.png', 
-        desc: 'Testimonial Slider', 
-        link: '/project/testimonalslider/index.html' 
-    },
-    project7: { 
         img: '/project/assets/7.png', 
         desc: 'Typewriter Effect', 
-        link: '/project/typewriter/index.html' 
+        link: '/project/practise/index.html'  
     }
+   
 };
-
 
 // Iterate over the data object and inject images, descriptions, and links
 Object.keys(projectData).forEach(projectId => {
