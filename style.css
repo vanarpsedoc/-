@@ -574,7 +574,10 @@ html, body {
         
         position: relative;
       text-align:center;
-     font-size: 1.8vw}
+     font-size: 5.5vw}
+     #h1{
+        text-align: center;
+     }
     
      
 }
