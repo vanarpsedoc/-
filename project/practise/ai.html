@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter Effect with Cycling Names</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <span id="typewriter"></span>
+
+    <script>
+        const spanId = document.getElementById("typewriter");
+        const arrayEl = ["MAGNUS CLARKSON", "HIKARU", "PRAGNANANDA", "GUKESH"];
+        let arrayIndex = 0;
+
+        function typeWriterEffect(text, callback) {
+            let charIndex = 0;
+            spanId.innerHTML = ""; // Clear previous text
+
+            function type() {
+                if (charIndex < text.length) {
+                    spanId.innerHTML += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 100); // Adjust speed here
+                } else {
+                    // Call the callback function when done typing
+                    if (callback) callback();
+                }
+            }
+            type();
+        }
+
+        function displayArrayItems() {
+            typeWriterEffect(arrayEl[arrayIndex], () => {
+                arrayIndex++;
+                if (arrayIndex >= arrayEl.length) {
+                    arrayIndex = 0;
+                }
+                // Wait for a moment before typing the next item
+                setTimeout(displayArrayItems, 1200); // Adjust delay before next item here
+            });
+        }
+
+        // Start the typewriter effect
+        displayArrayItems();
+    </script>
+</body>
+</html>
