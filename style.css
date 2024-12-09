@@ -147,13 +147,17 @@
 a{
     text-decoration: none; 
 }
+#specialcase{
+    text-align: center;
+    font-size: 1.75vh;
+}
 ul {
     list-style-type: none;
 }
 html, body {
     height: 100%;
     width: 100%;
-    background-color: rgb(160, 159, 159);
+    background-color: rgb(189, 187, 187);
     /* position: relative; */
     display: flex;
     align-items: flex-start;
@@ -178,6 +182,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
    
 }
 #home{
@@ -288,17 +293,17 @@ html, body {
     width: 50px; /* Adjust size as needed */
     height: 50px;
     border-radius: 50%;
-    background-color: #ff0000; /* Default red color */
+    /* background-color: #ff0000; Default red color */
 }
 
-.circle2 {
-    background-color: #00ff00; /* Green color for circles2 */
-}
+/* .circle2 {
+    /* background-color: #00ff00; Green color for circles2 
+} */
 .left .circles a{
     margin-top: 2vw;
     height: 5px;
     width: 5px;
-    background-color: red;
+    /* background-color: red; */
     padding: 2.6vmax;
     border-radius: 50%;
     text-align: center;
@@ -308,7 +313,7 @@ html, body {
     margin-top: 2vw;
     height: 5px;
     width: 5px;
-    background-color: red;
+    /* background-color: red; */
     padding: 2.6vmax;
     border-radius: 50%;
     text-align: center;
@@ -320,12 +325,15 @@ html, body {
     width: calc(100% - 359px);
     background-color: #333335;
     /* position: fixed; */
+    position: relative;
+    top: 35px;
+    line-height: 16vh;
     right: 0;
     border-radius: 18px;
     background:url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.ADcXHifUIvLmTm4fYfa5YQHaEo%26pid%3DApi&f=1&ipt=603995b70701fae98c2e66b157ddb0d2c6687544a8d44153cfa3e017dd6e633c&ipo=images");
     background-position: right; 
     margin: 1vmax;
-    height: 89%;
+    height: 80%;
     max-width: 900px;
     min-width: calc(100% - 359px);
     border-radius: 40px;
@@ -346,7 +354,7 @@ html, body {
 .img{
     position: relative;
     height: 80%;
-    background-color: red;
+    /* background-color: red; */
 }
 
  .projects {
@@ -413,6 +421,7 @@ html, body {
     .left h1{
         font-size: 3.7vh;
         padding: 0px ,1vw;
+        text-align: center;
     }
     
     .hero-section{
@@ -510,10 +519,15 @@ html, body {
         gap: 6.7vw;
         /* margin-left: auto; */
     }
+
     #home{
+        position: relative;
+        left: 0px;
+        right: 40px;
         margin-right: auto;
         font-size:4.2vw;
-        line-height: 4.2vw;
+        border-bottom:none;
+        
     }
     .right{
         display: none;
