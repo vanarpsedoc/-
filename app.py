@@ -1,13 +1,18 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from groq import Groq
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
 
-# Set your Groq API key
-api_key = "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"
+# Set your Groq API key from environment variables
+api_key = os.getenv("GROQ_API_KEY")
 
 client = Groq(api_key=api_key)
 
@@ -19,7 +24,7 @@ messages = [
 @app.route('/chat', methods=['POST'])
 def chat():
     user_input = request.json.get("message", "").strip()
-    
+
     if not user_input:
         return jsonify({"error": "Message cannot be empty"}), 400
 
@@ -39,10 +44,10 @@ def chat():
         )
 
         bot_reply = completion.choices[0].message.content
-        
+
         # Append assistant's reply to the conversation
         messages.append({"role": "assistant", "content": bot_reply})
-        
+
         return jsonify({"reply": bot_reply})
 
     except Exception as e:
